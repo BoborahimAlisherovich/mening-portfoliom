@@ -1,53 +1,18 @@
-from django.shortcuts import render,HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect
 from django.contrib import messages
-from .forms import ContactForm
+from django.urls import reverse
+from .forms import ContactForm, CommentForm
 from .bot import send_message
-from django.urls import reverse  # new
+from .models import Article, Portfolio,Comment
 
-from .models import Article,Contact
+def home_view(request):
 
-# -----------------------------------------------------------------------------------------------------------------
-
-# def home_view(request):
-    
-#     if request.method == "GET":
-#         form  = ContactForm()
-#     else:
-#         contact = Contact.objects.all()
-#         form = ContactForm(request.POST)
-#     if form.is_valid():
-#         name = form.cleaned_data["name"]
-#         email = form.cleaned_data["email"]
-        
-#         phone_number = form.cleaned_data["phone_number"]
-#         description = form.cleaned_data["description"]
-#         contact=contact
-
-#         send_message(name,email,phone_number,description)
-        
-#         form.save()
-#         form = ContactForm()
-        
-#     context = {"form":form}
-
-
-#     return render(request, "theme-particle.html",context)
-
-
-
-
-
-
-
-
-
-
-def contact_view(request):
+    articles = Article.objects.all()
+    portfolios = Portfolio.objects.all().order_by("-id")
 
     if request.method == "GET":
         form = ContactForm()
-    else:
-        # contact = Contact.objects.all()
+    elif request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
             name = form.cleaned_data["name"]
@@ -55,23 +20,43 @@ def contact_view(request):
             phone_number = form.cleaned_data["phone_number"]
             description = form.cleaned_data["description"]
 
-            send_message(name,email,phone_number,description)
+            send_message(name, email, phone_number, description)
+
+
             form.save()
+
             form = ContactForm()
-            messages.success(request, '🥳 Murojatingiz adminga yuborildi...')
+
+            messages.success(request, 'Your message has been sent successfully.')
             return HttpResponseRedirect(reverse('home-page'))
         else:
-            messages.error(request, 'Formani qaytadan to\'ldiring')
+            messages.error(request, 'Please correct the errors below.')
 
-    context = {"forms":form}
+    context = {
+        "form": form,
+        "articles": articles,
+        "portfolios": portfolios,
+    }
 
-    return render(request, "theme-particle.html",context)
+    return render(request, "theme-particle.html", context)
 
-# # # --------------------------------------------------------------------------------------------------------------------
+def blog_view(request, id):
+    article = Article.objects.get(id=id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.article = article
+            comment.rating = request.POST.get("rating", 3)  # Default to 3 if not selected
+            comment.save()
+            messages.success(request, 'Izoh yuborildi')
+            return HttpResponseRedirect(reverse("blog-page", args=[id]))
 
-
-
-def home_view(request):
-    articles = Article.objects.all().order_by("-id")
-    context = {"articles":articles}
-    return render(request,"theme-particle.html",context)
+    comments = Comment.objects.filter(article=article).order_by("-create_date")
+    form = CommentForm()
+    context = {
+        "article": article,
+        "comments": comments,
+        "form": form
+    }
+    return render(request, "blog.html", context)

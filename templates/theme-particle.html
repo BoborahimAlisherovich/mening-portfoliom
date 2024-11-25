@@ -4,42 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Willy Wonkas - Personal Portfolio Website Template" />
+    <meta name="description" content="Rustamqulov Boborahim Alisherovich" />
 	<meta name="keywords" content="blog, business card, creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme, vcard" />
-	<meta name="author" content="willy wonka" />
-    <title>Willy Wonkas - Personal Portfolio Website Template</title>
-  <!--favicon-img--> 
+	<meta name="author" content="Alisherovich" />
+    <title>Boborahim</title>
    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
-   <!--favicon-img-->
-   <!--main css file should not be removed -->
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <!--main css file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 </head>
 <body>
-    <!--contains all the div-->
+    <style>
+        audio{
+            display: none;
+        }
+    </style>
+    <audio controls autoplay >
+        <source src="../static/audio/legion.m4a"  type="audio/m4a">
+    </audio>
     <div id="all">
-    <!--mouse  follower-->
         <div class="cursor"></div>
-    <!--mouse  follower-->
-    <!--loader-->
         <div id="loader">
             <span class="color">Boborahim</span>Rustamqulov
         </div>
-    <!--loader-end-->
-    <!--link-screen-->
         <div id="breaker">
         </div>
         <div id="breaker-two">
         </div>
 
-    
-    <!--link-screen-->
-        <!--Main-Section-->
-        <!--Navigator-fullscreen-->
+
         <div id="navigation-content">
             <div class="logo">
-                <img src="{% static 'images/Boborahim.png' %}" alt="logo">
+               <a href="{% url 'home-page' %}"> <img src="{% static 'images/Boborahim.png' %}" alt="logo"></a>
             </div>
             <div class="navigation-close">
                 <span class="close-first"></span>
@@ -53,31 +48,26 @@
                 <a href="#" data-text="CONTACT" id="contact-link" >CONTACT</a>
             </div>
         </div>
-        <!--Navigator-Fullscreen END-->
-          <!--Home Page-->
-        <!--Menubar-->
-        <div id="navigation-bar">   
-            <img src="{% static 'images/Boborahim.png' %}" alt="logo">
+
+
+        <div id="navigation-bar">
+            <a href="{% url 'home-page' %}"> <img src="{% static 'images/Boborahim.png' %}" alt="logo"></a>
             <div class="menubar">
                 <span class="first-span"></span>
                 <span class="second-span"></span>
                 <span class="third-span"></span>
             </div>
         </div>
-        <!--Menubar End-->
-          <!--Header-->
         <div id="header">
             <div id="particles"></div>
-              <!--Social Media Links-->
             <div class="social-media-links">
-               <a href="https://www.instagram.com/boborahimdev/"><img src="{% static 'images/instagram logo.png' %}" class="social-media" alt="instagram-logo"></a><!--Your instagram homepage link inser in place of "#"-->
+               <a href="https://www.instagram.com/faxri_musilman/"><img src="{% static 'images/instagram logo.png' %}" class="social-media" alt="instagram-logo"></a><!--Your instagram homepage link inser in place of "#"-->
                 <a href="#"><img src="{% static 'images/facebook logo.png' %}" class="social-media" alt="facebook-logo"></a>
-                <a href="#"><img src="{% static 'images/linkedin logo.png' %}" class="social-media" alt="linkedin-logo"></a>
+                <a href="https://www.linkedin.com/in/boborahim-rustamqulov-a1a1652b0/"><img src="{% static 'images/linkedin logo.png' %}" class="social-media" alt="linkedin-logo"></a>
 
             </div>
 
-            
-            <!--Social Media Links end-->
+
             <div class="header-content">
                 {% if messages %}
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -92,60 +82,30 @@
 
 
                 <div class="header-content-box">
-                <div class="firstline"><span class="color">Alisherovich </span>Dev</div>
+                <div class="firstline"><span class="color">Boborahim </span>Dev</div>
                 <div class="secondline">
                 I'm a
             <span class="txt-rotate color" data-period="1200"data-rotate='[ " Backend Devaloper.", " Digital information processing.", " Freelancer." ]'></span>
             <span class="slash">|</span>
         </div>
                     <div class="contact">
-                <a href="Mailto:#"><img src="{% static 'images/mail.png' %}" alt="email-pic" class="contactpic"></a><!--Your email Id write in place of "#"-->
+                <a href="https://t.me/Alisherov1ch_002"><img src="{% static 'images/mail.png' %}" alt="email-pic" class="contactpic"></a><!--Your email Id write in place of "#"-->
                 <a href="Tel:#"><img src="{% static 'images/call.png' %}" alt="phone-pic" class="contactpic"></a><!--Your telephone number Id write in place of "#"-->
-                    </div>    
+                    </div>
             </div>
             </div>
-            <!--header image-->
             <div class="header-image">
             <img src="{% static 'images/man.jpg' %}" alt="logo">
             </div>
-            <!--header image end-->
         </div>
-           <!--Header End-->
-        <!--HomePage End-->
-        <!--Main-Section End-->
-        <!--about-->
+
         <div id="about">
             <div class="color-changer">
             <div class="color-panel">
                 <img src="{% static 'images/gear.png' %}" alt="">
             </div>
-            <div class="color-selector">
-                <div class="heading">Custom Colors</div>
-                <div class="colors">
-                    <ul >
-                    <li>
-                        <a href="#0" class="color-red " title="color-red"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-purple" title="color-purple"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-malt" title="color-malt"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-green" title="color-green"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-blue" title="color-blue"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-orange" title="color-orange"></a>
-                    </li>
-                    </ul>
-                </div>
+
             </div>
-            </div>
-            <!--about content-->
             <div id="about-content">
                 <div class="about-header">
                     About <span class="color">Me</span>
@@ -153,9 +113,8 @@
                 </div>
                 <div class="about-main">
             <div class="about-first-paragraph wow">
-            <!--about description-->
                <span class="about-first-line">
-                    I'm creative 
+                    I'm creative
                     <span class="color">Backend developer</span>
                      Navoi in Uzbekistan  </span>
                      <br>
@@ -164,51 +123,24 @@
                 <a href="static\doc\boborahim-cv.pdf"><button>To Open <span class="colors">CV</span></button></a>
             </div>
             </div>
-            <!--about picture-->
             <div class="about-img">
-                <img src="{% static 'images/about.jpg' %}" alt="Your Image">
+                <img src="{% static 'images/aboud.jpg' %}" alt="Your Image" style="max-width: 80%; height: auto;">
             </div>
             </div>
-    
+
             </div>
-            <!--services start-->
+
             <div id="services">
                 <div class="color-changer">
                     <div class="color-panel">
                         <img src="{% static 'images/gear.png' %}" alt="">
                     </div>
-                    <div class="color-selector">
-                        <div class="heading">Custom Colors</div>
-                        <div class="colors">
-                            <ul >
-                            <li>
-                                <a href="#0" class="color-red " title="color-red"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-purple" title="color-purple"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-malt" title="color-malt"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-green" title="color-green"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-blue" title="color-blue"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-orange" title="color-orange"></a>
-                            </li>
-                            </ul>
-                        </div>
-                    </div>
+
                     </div>
             <!--services header-->
                     <div class="services-heading wow">
                         <span class="color">My</span> Services
                     </div>
-            <!--services header end-->
-            <!--services content-->
                     <div class="services-content">
                            <div class="service-one service wow">
                                <div class="service-img">
@@ -216,7 +148,7 @@
                                </div>
                                <div class="service-description">
                                 <h2>Backend Devolaper</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quibusdam possimus</p>
+                                <p>I can make you any kind of Web Site you want</p>
                                </div>
                            </div>
                            <div class="service-two service wow">
@@ -224,8 +156,8 @@
                                <img src="{% static 'images/instagram.png' %}" alt="service-two">
                                </div>
                                <div class="service-description">
-                                <h2>Social Media</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quibusdam possimus</p>
+                                <h2>Telegram bot Devolaper </h2>
+                                <p>I can make you any type of Telegram bot you want</p>
                                </div>
                            </div>
                            <div class="service-three service wow">
@@ -234,13 +166,12 @@
                             </div>
                             <div class="service-description">
                                 <h2>Creative Design</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quibusdam possimus</p>
+                                <p>I can make any kind of Design you want</p>
                             </div>
                         </div>
                     </div>
             </div>
-            <!--services content end-->
-            <!--services end-->
+
             <div id="skills">
                 <div class="skills-header">
                      My <span class="color"> Skills</span>
@@ -308,167 +239,125 @@
                     </div>
                 </div>
             </div>
-    <!--copyright-section You Can Remove After Downloading-->
-            <div class="footer">
-             <div class="footer-text">
-                 <img src="{% static './images/copyright.png' %}" alt="copyright-img" class="images" height="14px"> Willy Wonkas
-             </div>
-            </div>
-    <!--copyright-section-->
+
+
+
         </div>
-        <!--about end-->
-        <!--portfolio-->
         <div id="portfolio">
             <div class="color-changer">
                 <div class="color-panel">
                     <img src="{% static 'images/gear.png' %}" alt="">
                 </div>
-                <div class="color-selector">
-                    <div class="heading">Custom Colors</div>
-                    <div class="colors">
-                        <ul >
-                        <li>
-                            <a href="#0" class="color-red " title="color-red"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-purple" title="color-purple"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-malt" title="color-malt"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-green" title="color-green"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-blue" title="color-blue"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-orange" title="color-orange"></a>
-                        </li>
-                        </ul>
-                    </div>
-                </div>
+
                 </div>
             <div class="portfolio-header"> <span class="color"> My </span> Portfolio
             <span class ="header-caption"> Some Of My <span class="color"> Works</span></span></div>
              <div id="portfolio-content">
-                 <div class="portfolio portfolio-first">
-                     <div class="portfolio-image">
-                        <img src="{% static 'images/translit.png' %}" alt="portfolio-first">
-                     </div>
-                     <div class="portfolio-text">
-                         <h2>translate the bot</h2>
-                         <p>this bot will translate English and Russian words into Uzbek</p>
-                         <div class="button"><a href="https://github.com/BoborahimAlisherovich/rus.eng-uz-bot"><button><span class="index"> Download GitHub<i class="gg-arrow-right"></i></span></button></a></div>
-                     </div>
-                 </div>
-                 <div class="portfolio portfolio-second">
-                    <div class="portfolio-image">
-                        <img src="{% static 'images/unnamed.png' %}" alt="portfolio-second">
-                    </div>
-                    <div class="portfolio-text">
-                        <h2>Kiril Lotin</h2>
-                        <p>If you write Cyrillic to this bot, it will output Latin, and if you type Latin, it will output the Cyrillic alphabet</p>
-                        <div class="button"><a href="https://github.com/BoborahimAlisherovich/kril-lotin"><button><span class="index"> Download GitHub<i class="gg-arrow-right"></i></span></button></a></div>
-                    </div>
-                </div>
-             
+
+
+             {% for portfolio in portfolios %}
                 <div class="portfolio portfolio-third">
                     <div class="portfolio-image">
-                        <img src="{% static 'images/images.jpg' %}" alt="portfolio-third">
+                        <img src="{{portfolio.image.url}}" alt="portfolio-third" >
                     </div>
                     <div class="portfolio-text">
-                        <h2>the meaning of names</h2>
-                        <p>If you write Uzbek names to this bot, it will extract the meaning</p>
-                        <div class="button"><a href="https://github.com/BoborahimAlisherovich/Ismlar-manosi-bot"><button><span class="index">  Download GitHub<i class="gg-arrow-right"></i></span></button></a></div>
+                        <h2>{{portfolio.title}}</h2>
+                        <p>{{portfolio.description}}</p>
+                        <div class="button"><a href="{{portfolio.url_GitHub}}"><button><span class="index"> Link<i class="gg-arrow-right"></i></span></button></a></div>
                     </div>
                 </div>
-                <div class="portfolio portfolio-fourth">
-                    <div class=" portfolio-image">
-                        <img src="{% static 'images/nik.png' %}" alt="portfolio-fourth">
-                    </div>
-                    <div class="portfolio-text">
-                        <h2>Nick bot</h2>
-                        <p>give this bot your name or nickname and it will make it look beautiful</p>
-                        <div class="button"><a href="https://github.com/BoborahimAlisherovich/Nick-bot"><button><span class="index"> Download GitHu<i class="gg-arrow-right"></i></span></button></a></div>
-                    </div>
-                </div>
+                {% endfor %}
+
                  </div>
-                    <!--copyright-section You Can Remove After Downloading-->
-            <div class="footer">
-                <div class="footer-text">
-                    <img src="{% static './images/copyright.png' %}" alt="copyright-img" class="images" height="14px"> Boborahim
-                </div>
-               </div>
-       <!--copyright-section-->
+
              </div>
-        <!--portfolio end-->
-        <!--blog-->
-        <div id="blog"> 
-        <div class="blog-header"> Blogs</span>
-            <span class ="header-caption"> My Latest <span class="color"> blog posts.</span></span></div>
-            <div class="blog-content">
-                {% for article in articles %}
-                 <div class="blogs">
-                     <a href="#">
-                     <div class="img">
-                        <img src="{{article.image.url}}" alt="blog-one">
-                        <div class="blog-date">{{article.create_data}}</div>
-                     </div>
-                     <div class="blog-text">
-                         <h3>{{article.title}}</h3>
-                         <p>{{article.description}}</p>
-                     </div></a>
-                 </div>  
-                 
-                 {% endfor %}    
-                
-                
-                       
-            </div>
-               <!--copyright-section You Can Remove After Downloading-->
-               <div class="footer">
-                <div class="footer-text">
-                    <img src="{% static './images/copyright.png' %}" alt="copyright-img" class="images" height="14px"> Boborahim
-                </div>
-            </div>
-           </div>
+
+       <div id="blog">
+   <div class="blog-header"> Blogs
+       <span class="header-caption"> My Latest <span class="color"> blog posts.</span></span>
+   </div>
+   <div class="blog-content">
+       {% for article in articles %}
+       <div class="blogs" style="transition: transform 0.3s ease;">
+           <a href="{% url 'blog-page' article.id %}">
+               <div class="img">
+                   <img src="{{ article.image.url }}" alt="Your Image" style="max-width: 80%; height: auto;">
+                   <div class="blog-date">{{ article.create_data }}</div>
                </div>
-       <!--copyright-section-->
+               <div class="blog-text">
+                   <h3>{{ article.title }}</h3>
+                   <a href="{% url 'blog-page' article.id %}" class="btn btn-primary" style="text-decoration: none; color: white;">Maqolaga o'tish</a>
+               </div>
+           </a>
+       </div>
+       {% endfor %}
+   </div>
+</div>
+
+
+
+
+
+<!-- 
+
+<div id="blog">
+<div class="blog-cards">
+<div class="blog-card">
+    <img src="https://picsum.photos/200/200" />
+    <div class="blog-card-info">
+        <p>wrrvervrv</p>
+        <span><p>next</p></span>
+    </div>
+</div>
+<div class="blog-card">
+    <img src="https://picsum.photos/200/200" />
+    <div class="blog-card-info">
+        <p>wrrvervrv</p>
+        <span><p>next</p></span>
+    </div>
+</div>
+<div class="blog-card">
+    <img src="https://picsum.photos/200/200" />
+    <div class="blog-card-info">
+        <p>wrrvervrv</p>
+        <span><p>next</p></span>
+    </div>
+</div>
+<div class="blog-card">
+    <img src="https://picsum.photos/200/200" />
+    <div class="blog-card-info">
+        <p>wrrvervrv</p>
+        <span><p>next</p></span>
+    </div>
+</div>
+<div class="blog-card">
+    <img src="https://picsum.photos/200/200" />
+    <div class="blog-card-info">
+        <p>wrrvervrv</p>
+        <span><p>next</p></span>
+    </div>
+</div>
+<div class="blog-card">
+    <img src="https://picsum.photos/200/200" />
+    <div class="blog-card-info">
+        <p>wrrvervrv</p>
+        <span><a href="#">next</a></span>
+    </div>
+</div>
+</div></div> -->
+
+
+            </div>
+
+               </div>
         </div>
-        
-        <!-- <!blog end-->
-        <!-- contact --> 
+
      <div id="contact">
         <div class="color-changer">
             <div class="color-panel">
                 <img src="{% static 'images/gear.png' %}" alt="">
             </div>
-            <div class="color-selector">
-                <div class="heading">Custom Colors</div>
-                <div class="colors">
-                    <ul >
-                    <li>
-                        <a href="#0" class="color-red " title="color-red"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-purple" title="color-purple"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-malt" title="color-malt"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-green" title="color-green"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-blue" title="color-blue"></a>
-                    </li>
-                    <li>
-                        <a href="#0" class="color-orange" title="color-orange"></a>
-                    </li>
-                    </ul>
-                </div>
-            </div>
+
             </div>
          <div class="contact-header">Contact <span class="color"> Me</span>
         <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div></div>
@@ -480,7 +369,7 @@
                  </div>
                  <form id="myForm" action="{% url 'home-page' %}" method="POST">
                     {% csrf_token %}*
-                   
+
                     <div class="input-line">
                         <input  id="name" type="text" name="name" placeholder="Name" class="input-name">
                         <input id="email" type="email" name="email" placeholder="Email"  class="input-name">
@@ -490,10 +379,8 @@
                     <textarea id ="description" name="description" class="input-textarea" placeholder="description"></textarea>
                     <button type="submit" id ="submit" value="OK">Send</button>
                  </form>
-               
+
              </div>
-            <!--Contact form-->
-            <!--Contact information-->
              <div class="contact-info">
                 <div class="contact-info-header">
                     Contact Info
@@ -503,14 +390,14 @@
                     <img src="{% static './images/icon-name.png' %}" class="icon" alt="name-icon">
                     <div class="contact-info-icon-text">
                         <h6>Name</h6>
-                        <p>Arlo Brown</p>
+                        <p>Boborahim</p>
                   </div>
                 </div>
                 <div class="contect-info-content-line">
                   <img src="{% static './images/icon-location.png' %}" class="icon" alt="location-icon">
                   <div class="contact-info-icon-text">
                       <h6>Location</h6>
-                      <p>New York, USA</p>
+                      <p>Navoi in Uzbekistan</p>
                 </div>
               </div>
               <div class="contect-info-content-line">
@@ -520,7 +407,7 @@
                       <p>+998936658507</p>
                 </div>
               </div>
-              
+
               <div class="contect-info-content-line">
                   <img src="{% static './images/icon-email.png' %}" class="icon" alt="email-icon">
                   <div class="contact-info-icon-text">
@@ -529,28 +416,16 @@
                 </div>
               </div>
                 </div>
-            <!--Contact information end-->
            </div>
         </div>
-                    <!--copyright-section You Can Remove After Downloading-->
-                    <div class="footer">
-                        <div class="footer-text">
-                            <img src="{% static './images/copyright.png' %}" alt="copyright-img" class="images" height="14px"> Willy Wonkas
-                        </div>
-                       </div>
-               <!--copyright-section-->
+
      </div>
-        <!--contact end-->
     </div>
-    <!--all the divisions-->
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/particles.js' %}"></script>
     <script src="{% static 'js/particles.min.js' %}"></script>
     <script src="{% static 'js/index.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <!--particles script-->
- 
 
 </body>
 </html>
