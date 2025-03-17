@@ -9,6 +9,8 @@ def home_view(request):
 
     articles = Article.objects.all()
     portfolios = Portfolio.objects.all().order_by("-id")
+    
+   
 
     if request.method == "GET":
         form = ContactForm()
@@ -40,8 +42,21 @@ def home_view(request):
 
     return render(request, "theme-particle.html", context)
 
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from django.contrib import messages
+from .models import Article, Comment
+from .forms import CommentForm
+
 def blog_view(request, id):
-    article = Article.objects.get(id=id)
+    article = get_object_or_404(Article, id=id)
+
+    # Faqat GET so‘rovida view_count oshiriladi
+    if request.method == 'GET':
+        article.view_count += 1
+        article.save()
+
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():

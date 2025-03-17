@@ -118,7 +118,7 @@
                     <span class="color">Backend developer</span>
                      Navoi in Uzbekistan  </span>
                      <br>
-               <span class="about-second-line">With 1 year of experience as a professional backend developer, I have the skills and knowledge you need to make your project a success. I enjoy every step of my work.</span>
+               <span class="about-second-line">With 2 year of experience as a professional backend developer, I have the skills and knowledge you need to make your project a success. I enjoy every step of my work.</span>
                <div class="cv">
                 <a href="static\doc\boborahim-cv.pdf"><button>To Open <span class="colors">CV</span></button></a>
             </div>
@@ -220,7 +220,7 @@
                     <div class="skill-html skill">
                         <div class="skill-text">
                     <div class="html">
-                        teamwork
+                        FastAPI
                     </div>
                         </div>
                     <div class="html-prog wow prog">
@@ -263,6 +263,7 @@
                     <div class="portfolio-text">
                         <h2>{{portfolio.title}}</h2>
                         <p>{{portfolio.description}}</p>
+                        <p>👁️ {{ article.view_count }} marta ko‘rildi</p>
                         <div class="button"><a href="{{portfolio.url_GitHub}}"><button><span class="index"> Link<i class="gg-arrow-right"></i></span></button></a></div>
                     </div>
                 </div>
@@ -286,6 +287,7 @@
                </div>
                <div class="blog-text">
                    <h3>{{ article.title }}</h3>
+                   <!-- <p>👁️ {{ article.view_count }} marta ko‘rildi</p> -->
                    <a href="{% url 'blog-page' article.id %}" class="btn btn-primary" style="text-decoration: none; color: white;">Maqolaga o'tish</a>
                </div>
            </a>
@@ -293,58 +295,6 @@
        {% endfor %}
    </div>
 </div>
-
-
-
-
-
-<!--
-
-<div id="blog">
-<div class="blog-cards">
-<div class="blog-card">
-    <img src="https://picsum.photos/200/200" />
-    <div class="blog-card-info">
-        <p>wrrvervrv</p>
-        <span><p>next</p></span>
-    </div>
-</div>
-<div class="blog-card">
-    <img src="https://picsum.photos/200/200" />
-    <div class="blog-card-info">
-        <p>wrrvervrv</p>
-        <span><p>next</p></span>
-    </div>
-</div>
-<div class="blog-card">
-    <img src="https://picsum.photos/200/200" />
-    <div class="blog-card-info">
-        <p>wrrvervrv</p>
-        <span><p>next</p></span>
-    </div>
-</div>
-<div class="blog-card">
-    <img src="https://picsum.photos/200/200" />
-    <div class="blog-card-info">
-        <p>wrrvervrv</p>
-        <span><p>next</p></span>
-    </div>
-</div>
-<div class="blog-card">
-    <img src="https://picsum.photos/200/200" />
-    <div class="blog-card-info">
-        <p>wrrvervrv</p>
-        <span><p>next</p></span>
-    </div>
-</div>
-<div class="blog-card">
-    <img src="https://picsum.photos/200/200" />
-    <div class="blog-card-info">
-        <p>wrrvervrv</p>
-        <span><a href="#">next</a></span>
-    </div>
-</div>
-</div></div> -->
 
 
             </div>

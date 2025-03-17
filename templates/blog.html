@@ -136,7 +136,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8 article-container">
                 <h1 class="article-title">{{ article.title }}</h1>
-                <p class="article-meta">{{ article.create_data|date:"F j, Y" }} {{ article.author }}</p>
+                <p class="article-meta">
+                    {{ article.create_data|date:"F j, Y" }} | Muallif: {{ article.author }} | 👁️ {{ article.view_count }} marta ko‘rildi
+                </p>
+                
                 <img src="{{ article.image.url }}" alt="{{ article.title }}" class="img-fluid my-3 article-image">
                 <p class="article-description">{{ article.description|linebreaks }}</p>
 
